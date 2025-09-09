@@ -1,0 +1,335 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 0;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 25px;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+
+
+.section2-background .btn1 {
+    margin-top: 20px;
+    align-self: flex-start;
+    background-color: red; /* اللون الافتراضي */
+    color: white; /* لون النص */
+    transition: background-color 0.3s ease; /* تأثير انتقال سلس */
+    position: relative;
+    overflow: hidden; /* إخفاء أي جزء يتجاوز حدود الزر */
+    padding: 10px 20px; /* لضبط حجم الزر */
+    border: none; /* إزالة الحدود */
+}
+
+.section2-background .btn1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* بداية خارج الزر */
+    width: 100%; /* عرض الزر */
+    height: 100%; /* ارتفاع الزر */
+    background-color: gray; /* اللون الرمادي */
+    transition: left 0.3s ease; /* تأثير انتقال عند التحريك */
+    z-index: 0; /* خلف الزر */
+}
+
+.section2-background .btn1:hover::before {
+    left: 0; /* تحريك اللون الرمادي إلى اليمين */
+}
+
+.section2-background .btn1:hover {
+    color: white; /* الحفاظ على لون النص */
+    z-index: 1; /* إظهار النص فوق الخلفية */
+}
+
+/* إضافة هذا السطر لزيادة وضوح النص */
+.section2-background .btn1:hover span {
+    position: relative;
+    z-index: 1; /* تأكد من أن النص في المقدمة */
+}
+
+
+
+
+
+.content-section {
+    padding-top: 100px;
+}
+
+.hover {
+    transition: all 0.3s ease;
+}
+
+.hover:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.card-title {
+    font-size: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 18px;
+}
+
+.btn1 {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+    border: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+}
+
+.card-img-topzero {
+    width: 500px;
+    height: auto;
+}
+
+.sec2 {
+    padding: 20px 0;
+}
+
+.sec2 .card {
+    margin: 10px auto;
+    width: 80%;
+    border: none;
+}
+
+.new {
+    margin: 0px 40px;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+.red {
+    color: red;
+    font-size: 20px;
+}
+
+.img-container {
+    padding: 5px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.pop {
+    margin-bottom: 30px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.popular-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.add-to-cart-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 0, 0, 0.7);
+    text-align: center;
+    padding: 5px 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    height: 50px;
+}
+
+.product-card:hover .popular-img {
+    transform: scale(1.1);
+}
+
+.product-card:hover .add-to-cart-overlay {
+    opacity: 1;
+}
+
+.wish-icon {
+    font-size: 24px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-card:hover .wish-icon {
+    opacity: 1;
+}
+
+.card-body {
+    padding: 15px 0;
+    border: none;
+}
+
+.text-danger {
+    color: #d9534f;
+    font-size: 18px;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart-text {
+    color: white;
+    font-weight: bold;
+}
+
+.card-img-top1 {
+    width: 400px;
+    height: 400px;
+}
+
+.align-items-center1 {
+    align-items: center;
+    margin: 70px;
+}
+
+.content-section h5 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.content-section p {
+    font-size: 16px;
+    color: gray;
+}
+
+.content-section .btn1 {
+    font-size: 18px;
+    padding: 12px 24px;
+}
+
+.rectangular {
+    width: 60%;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.flex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    color: white;
+    z-index: 10;
+}
+
+.flex i, .flex h5, .flex p {
+    color: white;
+}
+
+.row4 {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    justify-content: center;
+}
+
+.column4 {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 0;
+}
+
+.column4 h5, .column4 h6 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.column4 h6, .column4 p {
+    color: gray;
+}
+
+.lorem {
+    width: 150px;
+}
+
+.fainal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: gray;
+}
+
+.fainall {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: gray;
+}
